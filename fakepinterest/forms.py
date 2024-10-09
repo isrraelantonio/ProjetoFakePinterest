@@ -8,7 +8,7 @@ from fakepinterest.models import Usuario, Foto
 
 
 class FormLogin(FlaskForm):
-    email = StringField("Email",validators= [DataRequired(), Email()])
+    email = StringField("E-mail", validators= [DataRequired(), Email()])
     senha = PasswordField("Senha", validators= [DataRequired()])
     botao = SubmitField("Fazer login")
 

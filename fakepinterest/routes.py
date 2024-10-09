@@ -1,20 +1,24 @@
 #links do site
-from flask import render_template, url_for
+from flask import render_template
 from fakepinterest import app
 from flask_login import login_required
+from fakepinterest.forms import FormLogin, FormCriarConta
 
 
 
 
 
 
-
-@app.route("/")
+@app.route("/", methods = ["GET", "POST"])
 def homepage():
+   
     return  render_template("homepage.html")
 
 
-
+@app.route("/criatconta", methods = ["GET", "POST"])
+def criarconta():
+   
+    return render_template("criarconta.html")
 
 
 
